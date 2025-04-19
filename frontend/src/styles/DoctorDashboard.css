@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e0f2f1, #e8f5e9);
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 220px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menu-item {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+    color: #00796b;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: rgba(0, 121, 107, 0.1);
+    font-weight: bold;
+}
+
+.main-content {
+    flex-grow: 1;
+     padding: 10px 40px 40px;
+    background: transparent;
+    overflow-y: auto;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00796b;
+}
+
+.card-subtext {
+    font-size: 14px;
+    color: #004d40;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #004d40;
+}
+
+.logout-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #00695c;
+}
+
+.doctor-profile-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+}
+
+.doctor-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #00796b;
+}
+
+.doctor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #004d40;
+    margin: 0;
+}
+
+.doctor-qual {
+    font-size: 14px;
+    color: #00695c;
+}

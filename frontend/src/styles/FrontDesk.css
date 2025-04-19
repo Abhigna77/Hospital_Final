@@ -1,0 +1,274 @@
+/* App wrapper */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c2f0e9;
+    color: #035c5c;
+    padding: 15px 25px;
+    border-bottom: 2px solid #bce0db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    gap: 10px;
+  }
+  
+  .navbar-left a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navbar-right .logout-btn {
+    background-color: #029e9e;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .navbar-right .logout-btn:hover {
+    background-color: #027c7c;
+  }
+  
+  /* Layout */
+  .dashboard-container {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background-color: #d0f2e9;
+    color: #035c5c;
+    padding: 20px;
+  }
+  
+  .sidebar-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #017171;
+  }
+  
+  .sidebar-nav {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-nav li {
+    padding: 12px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .sidebar-nav li:hover {
+    background-color: #b5e8dc;
+  }
+  
+  .sidebar-nav li a {
+    color: #035c5c;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Styling for Sidebar Home Link */
+  .sidebar-title a {
+    color: #035c5c; /* Same color as other links */
+    text-decoration: none; /* No underline */
+    display: block;
+    padding: 10px 12px; /* Same padding as other links */
+    border-radius: 6px;
+  }
+  
+  .sidebar-title a:hover {
+    background-color: #b5e8dc; /* Same hover effect */
+  }
+  
+  /* Main content area */
+  .content-area {
+    flex: 1;
+    background: linear-gradient(to bottom right, #e0fff5, #f3fff9); /* lighter green shades */
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  /* Dashboard welcome */
+  .welcome-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #027c7c;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Cards section */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 15px;
+    justify-items: center;
+  }
+  
+  .card {
+    background-color: #e9fdf7;
+    width: 260px;  /* Increased width */
+  height: 160px; /* Increased height */
+  
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: #d6f9ef;
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #027c7c;
+  }
+  
+  .card p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #3c706f;
+  }
+  
+  /* Form card styles */
+  /* .form-card {
+    background-color: #f7fffc;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: auto;
+  } */
+  .form-card {
+    background-color: #f7fffc;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    max-width: 90%; /* Make it wider */
+    margin: auto;
+    overflow-x: auto; /* Allow horizontal scroll if content overflows */
+  }
+  
+  
+  .form-card h2 {
+    margin-bottom: 25px;
+    color: #017171;
+  }
+  
+  .form-card form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-card label {
+    margin-bottom: 6px;
+    color: #036666;
+    font-weight: 500;
+  }
+  
+  .form-card input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #bce0db;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  /* Buttons */
+  .form-card button,
+  .logout-btn {
+    padding: 12px;
+    background-color: #029e9e;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-card button:hover,
+  .logout-btn:hover {
+    background-color: #027c7c;
+  }
+  
+  /* Table styling */
+  .form-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .form-card table, th, td {
+    border: 1px solid #cceee6;
+  }
+  
+  .form-card th, .form-card td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .form-card th {
+    background-color: #d4f6ee;
+  }
+  
+  /* Room status grid */
+  .room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .room-box {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #b0dcd0;
+    color: white;
+  }
+  
+  .room-box.occupied {
+    background-color: #f07070;
+  }
+  
+  .room-box.available {
+    background-color: #4cd790;
+  }
